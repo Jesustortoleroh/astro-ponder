@@ -1,6 +1,7 @@
 ---
 // Frontmatter
 // This code runs on the server, NOT sent to the browser.
+import Details from "../components/Details.astro";
 const title = "Home";
 const message = "¡Hello Astro!";
 ---
@@ -15,5 +16,8 @@ const message = "¡Hello Astro!";
     <h1>{message}</h1>
     <p>My first Astro page!</p>
     <p>I am learning how to build websites with Astro!</p>
+	<Details summary="Astro Component" class="some-class" aria-label="component example">
+      <p>Child content</p>
+    </Details>
   </body>
 </html>
