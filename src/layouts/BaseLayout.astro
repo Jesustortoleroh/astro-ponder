@@ -1,6 +1,7 @@
 ---
+// Frontmatter: Code that runs on the server, NOT sent to the browser.
 import Header from "../components/Header.astro";
-const { title } = Astro.props;
+const { title = "Astro" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,3 +21,17 @@ const { title } = Astro.props;
     </main>
   </body>
 </html>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+  }
+  header h1 {
+    margin: 0;
+  }
+</style>
