@@ -1,24 +1,22 @@
 ---
-// Frontmatter
-// This code runs on the server, NOT sent to the browser.
+import Header from "../components/Header.astro";
 const { title } = Astro.props;
 ---
-
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-     <title>Astro | {title}</title>
+    <title>Astro | {title}</title>
   </head>
   <body>
     <header>
       <h1>Astro</h1>
+      <Header />
     </header>
     <main>
-      <!-- the slot is where any children contents of this component will be placed. -->
       <slot />
     </main>
-</body>
+  </body>
 </html>
