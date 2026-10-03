@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Frontmatter
+// This code runs on the server, NOT sent to the browser.
+const title = "Home";
+const message = "¡Hello Astro!";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro | {title}</title>
+  </head>
+  <body>
+    <h1>{message}</h1>
+    <p>My first Astro page!</p>
+    <p>I am learning how to build websites with Astro!</p>
+  </body>
+</html>
