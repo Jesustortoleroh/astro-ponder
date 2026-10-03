@@ -1,16 +1,15 @@
 ---
-// Frontmatter
-// This code runs on the server, NOT sent to the browser.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Details from "../components/Details.astro";
+
 const title = "Home";
 ---
 
-<BaseLayout>
-<!-- Everything inside of the element will get inserted in to the <slot> we added above. -->
-<h1>Hello Astro!</h1>
+<BaseLayout title={title}>
+  <h1>Hello Astro!</h1>
   <p>My first Astro page!</p>
   <p>I am learning how to build websites with Astro!</p>
+
   <Details
     summary="Astro Component"
     class="some-class"

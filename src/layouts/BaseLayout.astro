@@ -1,7 +1,7 @@
 ---
 // Frontmatter
 // This code runs on the server, NOT sent to the browser.
-const { title = "Astro" } = Astro.props;
+const { title } = Astro.props;
 ---
 
 
@@ -10,7 +10,7 @@ const { title = "Astro" } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Astro | {title}</title>
+     <title>Astro | {title}</title>
   </head>
   <body>
     <header>
