@@ -1,9 +1,13 @@
-import { defineCollection } from "astro:content";
-import { glob, file } from "astro/loaders"; 
+import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
-// we can create collections that load from markdown files...this is an example of how to do that.
 const posts = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/posts" })
+  loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.string(),
+  }),
 });
-//make sure to export the collection to have it be available to use.
+
 export const collections = { posts };
