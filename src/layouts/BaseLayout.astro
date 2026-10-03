@@ -1,0 +1,24 @@
+---
+// Frontmatter
+// This code runs on the server, NOT sent to the browser.
+const { title = "Astro" } = Astro.props;
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro | {title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Astro</h1>
+    </header>
+    <main>
+      <!-- the slot is where any children contents of this component will be placed. -->
+      <slot />
+    </main>
+</body>
+</html>
